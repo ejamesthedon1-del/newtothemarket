@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ----------------------------
+   Base body styling
+----------------------------- */
+body {
+  @apply bg-white text-gray-900 min-h-screen font-sans;
+  overflow-x: hidden;
+  overflow-y: scroll; /* Keeps scrollbar stable */
+  scroll-behavior: smooth;
+  width: 100%;
+  max-width: 100vw;
+}
+
+/* ----------------------------
+   Root color variables
+----------------------------- */
+:root {
+  --foreground: #111;
+  --background: #fff;
+}
+
+/* ----------------------------
+   Mobile-friendly global fixes
+----------------------------- */
+
+/* Prevent horizontal overflow on html as well */
+html {
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100vw;
+  touch-action: manipulation; /* Reduces accidental double-tap zoom */
+}
+
+/* Ensure everything respects box boundaries */
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent; /* No gray flash on iOS tap */
+}
+
+/* Prevent iOS Safari zoom when focusing small inputs/buttons */
+input,
+select,
+textarea,
+button {
+  font-size: 16px !important;
+}
+
+/* Images and videos never overflow screen */
+img,
+video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
