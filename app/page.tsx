@@ -36,7 +36,7 @@ export default function Home() {
   };
 
   return (
-    <main className="min-h-screen bg-white text-gray-900">
+    <main className="min-h-screen bg-gradient-to-br from-purple-50 via-white to-purple-50 text-gray-900">
       <Header />
 
       {/* Fade-in animation */}
@@ -54,11 +54,22 @@ export default function Home() {
         .animate-fadeIn {
           animation: fadeIn 1.2s ease-in-out forwards;
         }
+        @keyframes float {
+          0%, 100% {
+            transform: translateY(0px);
+          }
+          50% {
+            transform: translateY(-10px);
+          }
+        }
+        .animate-float {
+          animation: float 3s ease-in-out infinite;
+        }
       `}</style>
 
       {/* Hero Section */}
       <section className="relative min-h-[600px] md:min-h-[700px] flex items-center justify-center overflow-hidden">
-        {/* Background Image */}
+        {/* Background with Purple Gradient Overlay */}
         <div className="absolute inset-0 z-0">
           <Image
             src="/habersham.png"
@@ -68,7 +79,7 @@ export default function Home() {
             priority
             quality={100}
           />
-          <div className="absolute inset-0 bg-black/40"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-purple-900/70 via-purple-800/60 to-purple-600/50"></div>
         </div>
 
         {/* Hero Content */}
@@ -99,7 +110,7 @@ export default function Home() {
             <button
               type="submit"
               disabled={loading}
-              className="bg-white text-black py-3 px-6 rounded-full font-semibold hover:bg-gray-100 transition text-sm shadow-xl whitespace-nowrap w-full md:w-auto"
+              className="bg-white text-purple-700 py-3 px-6 rounded-full font-semibold hover:bg-purple-50 transition text-sm shadow-xl whitespace-nowrap w-full md:w-auto"
             >
               {loading ? "Analyzing..." : "Get My Free Listing Health Report"}
             </button>
@@ -112,28 +123,28 @@ export default function Home() {
 
       {/* Stats Section */}
       <section className="max-w-6xl mx-auto mt-16 px-4">
-        <h2 className="text-3xl font-semibold text-center mb-8">
+        <h2 className="text-3xl font-semibold text-center mb-8 text-gray-800">
           Why Homes Sit on the Market
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
-          <div className="p-6 bg-gray-100 rounded-xl shadow-sm">
-            <p className="text-4xl font-bold text-black mb-2">72%</p>
-            <p className="text-gray-600">
+          <div className="p-8 bg-gradient-to-br from-purple-500 to-purple-600 rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+            <p className="text-5xl font-bold text-white mb-3">72%</p>
+            <p className="text-white/90 text-sm leading-relaxed">
               of homes fail to attract buyers quickly due to poor listing photos.
             </p>
           </div>
 
-          <div className="p-6 bg-gray-100 rounded-xl shadow-sm">
-            <p className="text-4xl font-bold text-black mb-2">65%</p>
-            <p className="text-gray-600">
+          <div className="p-8 bg-gradient-to-br from-purple-500 to-purple-600 rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+            <p className="text-5xl font-bold text-white mb-3">65%</p>
+            <p className="text-white/90 text-sm leading-relaxed">
               of listings get fewer views because of ineffective descriptions.
             </p>
           </div>
 
-          <div className="p-6 bg-gray-100 rounded-xl shadow-sm">
-            <p className="text-4xl font-bold text-black mb-2">58%</p>
-            <p className="text-gray-600">
+          <div className="p-8 bg-gradient-to-br from-purple-500 to-purple-600 rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+            <p className="text-5xl font-bold text-white mb-3">58%</p>
+            <p className="text-white/90 text-sm leading-relaxed">
               of homes stay longer on the market due to poor promotion.
             </p>
           </div>
@@ -142,7 +153,7 @@ export default function Home() {
 
       {/* How It Helps Section */}
       <section className="max-w-6xl mx-auto mt-16 px-4">
-        <h2 className="text-3xl font-semibold text-center mb-12">
+        <h2 className="text-3xl font-semibold text-center mb-12 text-gray-800">
           How ListingRevive Helps You Sell Faster
         </h2>
 
@@ -172,10 +183,71 @@ export default function Home() {
         <div className="text-center mt-12">
           <a
             href="#"
-            className="inline-block bg-black text-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-800 transition"
+            className="inline-block bg-gradient-to-r from-purple-600 to-purple-700 text-white px-8 py-3 rounded-full font-semibold hover:from-purple-700 hover:to-purple-800 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
           >
             Get AI Analysis
           </a>
+        </div>
+      </section>
+
+      {/* Real Estate Marketing Info Sections */}
+      <section className="max-w-6xl mx-auto mt-20 px-4 mb-16">
+        <h2 className="text-3xl font-semibold text-center mb-12 text-gray-800">
+          Real Estate Marketing Insights
+        </h2>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {/* Info Card 1 */}
+          <div className="bg-white rounded-3xl shadow-lg p-8 hover:shadow-xl transition-all duration-300 border border-purple-100">
+            <div className="flex items-center mb-4">
+              <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center text-white text-2xl">
+                🏠
+              </div>
+              <h3 className="text-xl font-bold ml-4 text-gray-800">Professional Photography</h3>
+            </div>
+            <p className="text-gray-600 leading-relaxed">
+              High-quality photos are essential for attracting buyers. Professional photography can increase listing views by up to 118% and help homes sell faster. Proper lighting, angles, and staging make all the difference in showcasing your property's best features.
+            </p>
+          </div>
+
+          {/* Info Card 2 */}
+          <div className="bg-white rounded-3xl shadow-lg p-8 hover:shadow-xl transition-all duration-300 border border-purple-100">
+            <div className="flex items-center mb-4">
+              <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center text-white text-2xl">
+                📱
+              </div>
+              <h3 className="text-xl font-bold ml-4 text-gray-800">Social Media Marketing</h3>
+            </div>
+            <p className="text-gray-600 leading-relaxed">
+              Leverage the power of social media to reach potential buyers where they spend their time. Strategic posts on Facebook, Instagram, and LinkedIn can dramatically expand your listing's reach and generate qualified leads through targeted advertising.
+            </p>
+          </div>
+
+          {/* Info Card 3 */}
+          <div className="bg-white rounded-3xl shadow-lg p-8 hover:shadow-xl transition-all duration-300 border border-purple-100">
+            <div className="flex items-center mb-4">
+              <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center text-white text-2xl">
+                ✨
+              </div>
+              <h3 className="text-xl font-bold ml-4 text-gray-800">Virtual Staging</h3>
+            </div>
+            <p className="text-gray-600 leading-relaxed">
+              Virtual staging allows buyers to visualize the potential of empty spaces without the cost of physical staging. This cost-effective solution helps buyers emotionally connect with the property and can reduce time on market significantly.
+            </p>
+          </div>
+
+          {/* Info Card 4 */}
+          <div className="bg-white rounded-3xl shadow-lg p-8 hover:shadow-xl transition-all duration-300 border border-purple-100">
+            <div className="flex items-center mb-4">
+              <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center text-white text-2xl">
+                🎯
+              </div>
+              <h3 className="text-xl font-bold ml-4 text-gray-800">Targeted Advertising</h3>
+            </div>
+            <p className="text-gray-600 leading-relaxed">
+              Reach the right buyers with precision-targeted digital advertising campaigns. By analyzing buyer demographics and behavior, we ensure your listing appears in front of qualified prospects who are actively searching for properties like yours.
+            </p>
+          </div>
         </div>
       </section>
 
@@ -189,7 +261,7 @@ export default function Home() {
 
 /* -------------------- Header -------------------- */
 const Header = () => (
-  <header className="relative flex items-center justify-between px-6 py-4 bg-white shadow-sm">
+  <header className="relative flex items-center justify-between px-6 py-4 bg-white/80 backdrop-blur-md shadow-sm border-b border-purple-100">
     <div className="flex items-center space-x-6">
       <Image
         src="/smartrealtortool.svg"
@@ -199,13 +271,13 @@ const Header = () => (
         className="opacity-0 animate-fadeIn cursor-pointer"
       />
       <nav className="hidden md:flex space-x-6 text-sm font-medium">
-        <a href="#about" className="hover:text-gray-600 transition">
+        <a href="#about" className="text-gray-700 hover:text-purple-600 transition">
           About
         </a>
-        <a href="#plans" className="hover:text-gray-600 transition">
+        <a href="#plans" className="text-gray-700 hover:text-purple-600 transition">
           Plans
         </a>
-        <a href="#contact" className="hover:text-gray-600 transition">
+        <a href="#contact" className="text-gray-700 hover:text-purple-600 transition">
           Contact
         </a>
       </nav>
@@ -224,16 +296,20 @@ const FeatureCard = ({
   title: string;
   text: string;
 }) => (
-  <div className="p-6 bg-white rounded-xl shadow-md hover:shadow-lg transition">
-    <div className="flex justify-center mb-4">
+  <div className="p-8 bg-white rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-purple-100">
+    <div className="flex justify-center mb-6">
       {icon.startsWith("/") ? (
-        <Image src={icon} alt={title} width={64} height={64} />
+        <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center p-3">
+          <Image src={icon} alt={title} width={40} height={40} className="brightness-0 invert" />
+        </div>
       ) : (
-        <span className="text-3xl">{icon}</span>
+        <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center">
+          <span className="text-4xl">{icon}</span>
+        </div>
       )}
     </div>
-    <h3 className="text-xl font-semibold mb-2">{title}</h3>
-    <p className="text-gray-600 text-sm">{text}</p>
+    <h3 className="text-xl font-bold mb-3 text-gray-800">{title}</h3>
+    <p className="text-gray-600 text-sm leading-relaxed">{text}</p>
   </div>
 );
 
@@ -245,18 +321,18 @@ const MobileMenu = () => {
     <div className="md:hidden relative">
       <button
         onClick={() => setOpen(!open)}
-        className="p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-black"
+        className="p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-600"
       >
         <div
-          className="w-6 h-0.5 bg-black mb-1 transition-all duration-300"
+          className="w-6 h-0.5 bg-purple-600 mb-1 transition-all duration-300"
           style={{ transform: open ? "rotate(45deg) translateY(8px)" : "none" }}
         />
         <div
-          className="w-6 h-0.5 bg-black mb-1 transition-all duration-300"
+          className="w-6 h-0.5 bg-purple-600 mb-1 transition-all duration-300"
           style={{ opacity: open ? 0 : 1 }}
         />
         <div
-          className="w-6 h-0.5 bg-black transition-all duration-300"
+          className="w-6 h-0.5 bg-purple-600 transition-all duration-300"
           style={{
             transform: open ? "rotate(-45deg) translateY(-8px)" : "none",
           }}
@@ -264,7 +340,7 @@ const MobileMenu = () => {
       </button>
 
       <div
-        className={`absolute top-full left-0 mt-2 bg-white shadow-lg rounded-b-lg overflow-hidden transition-all duration-300 z-50 ${
+        className={`absolute top-full right-0 mt-2 bg-white shadow-xl rounded-2xl overflow-hidden transition-all duration-300 z-50 border border-purple-100 ${
           open ? "max-h-60 opacity-100" : "max-h-0 opacity-0"
         }`}
         style={{ minWidth: "180px", maxWidth: "220px" }}
@@ -272,21 +348,21 @@ const MobileMenu = () => {
         <nav className="flex flex-col">
           <a
             href="#about"
-            className="px-4 py-3 border-b hover:bg-gray-100 transition"
+            className="px-4 py-3 border-b border-purple-50 hover:bg-purple-50 transition text-gray-700"
             onClick={() => setOpen(false)}
           >
             About
           </a>
           <a
             href="#plans"
-            className="px-4 py-3 border-b hover:bg-gray-100 transition"
+            className="px-4 py-3 border-b border-purple-50 hover:bg-purple-50 transition text-gray-700"
             onClick={() => setOpen(false)}
           >
             Plans
           </a>
           <a
             href="#contact"
-            className="px-4 py-3 hover:bg-gray-100 transition"
+            className="px-4 py-3 hover:bg-purple-50 transition text-gray-700"
             onClick={() => setOpen(false)}
           >
             Contact
