@@ -35,15 +35,15 @@ function PlacesAutocompleteInput({
         onChange={(e) => setValue(e.target.value)}
         disabled={!ready}
         placeholder="Enter your home address"
-        className="w-full border-2 border-white/20 bg-white/90 rounded-2xl px-6 py-4 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500 disabled:bg-gray-100 disabled:cursor-not-allowed shadow-lg text-base text-gray-900 placeholder-gray-500"
+        className="w-full border-2 border-gray-200 bg-white rounded-lg px-6 py-4 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500 disabled:bg-gray-100 disabled:cursor-not-allowed shadow-sm text-base text-gray-900 placeholder-gray-500 transition-all"
       />
 
       {status === "OK" && (
-        <ul className="absolute left-0 right-0 border border-gray-200 rounded-2xl mt-2 bg-white shadow-xl z-50 max-h-60 overflow-y-auto">
+        <ul className="absolute left-0 right-0 border border-gray-200 rounded-lg mt-2 bg-white shadow-lg z-50 max-h-60 overflow-y-auto">
           {data.map((suggestion: { place_id: string; description: string }) => (
             <li
               key={suggestion.place_id}
-              className="px-6 py-4 hover:bg-primary-50 cursor-pointer border-b last:border-b-0 text-base text-gray-900 transition-colors"
+              className="px-6 py-4 hover:bg-gray-50 cursor-pointer border-b last:border-b-0 text-base text-gray-900 transition-colors"
               onClick={() => {
                 setValue(suggestion.description, false);
                 clearSuggestions();
@@ -73,7 +73,7 @@ export default function AddressInput({
   // Loading error
   if (loadError) {
     return (
-      <div className="w-full border-2 border-red-300 rounded-2xl px-6 py-4 bg-red-50 text-red-600 shadow-lg text-base">
+      <div className="w-full border-2 border-red-300 rounded-lg px-6 py-4 bg-red-50 text-red-600 shadow-sm text-base">
         Error loading Google Maps. Please check your API key.
       </div>
     );
@@ -85,7 +85,7 @@ export default function AddressInput({
       <input
         disabled
         placeholder="Loading Google Maps..."
-        className="w-full border-2 border-white/20 bg-white/90 rounded-2xl px-6 py-4 cursor-not-allowed shadow-lg text-base text-gray-500"
+        className="w-full border-2 border-gray-200 bg-gray-50 rounded-lg px-6 py-4 cursor-not-allowed shadow-sm text-base text-gray-500"
       />
     );
   }
