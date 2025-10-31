@@ -52,7 +52,7 @@ export default function Home() {
             src="/habersham.png"
             alt="Beautiful Luxury Home"
             fill
-            className="object-cover opacity-40"
+            className="object-cover opacity-60"
             priority
             quality={100}
           />
@@ -76,7 +76,9 @@ export default function Home() {
             <form onSubmit={handleSubmit} className="space-y-4">
               <div className="bg-white rounded-2xl p-8 shadow-xl">
                 <AddressInput
-                  onSelect={(addr) => setFormData({ ...formData, address: addr })}
+                  onSelect={(addr) =>
+                    setFormData({ ...formData, address: addr })
+                  }
                 />
                 <button
                   type="submit"
@@ -234,7 +236,9 @@ const StatCard = ({
   color: string;
   textColor: string;
 }) => (
-  <div className={`${color} p-8 rounded-lg shadow-card hover:shadow-hover transition-all transform hover:-translate-y-1`}>
+  <div
+    className={`${color} p-8 rounded-lg shadow-card hover:shadow-hover transition-all transform hover:-translate-y-1`}
+  >
     <p className={`text-5xl font-bold ${textColor} mb-4`}>{percentage}</p>
     <p className="text-gray-700 leading-relaxed">{description}</p>
   </div>
