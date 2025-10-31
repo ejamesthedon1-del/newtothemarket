@@ -10,7 +10,7 @@ interface LogoContextType {
 const LogoContext = createContext<LogoContextType | undefined>(undefined);
 
 export const LogoProvider = ({ children }: { children: ReactNode }) => {
-  const [logo, setLogo] = useState("/images/smartrealtortool.svg"); // default
+  const [logo, setLogo] = useState("/logo.svg"); // default
   return (
     <LogoContext.Provider value={{ logo, setLogo }}>
       {children}

@@ -188,11 +188,12 @@ const Header = () => (
       <div className="flex items-center justify-between">
         <div className="flex items-center space-x-8">
           <Image
-            src="/smartrealtortool.svg"
-            alt="Listing Revive Logo"
-            width={50}
-            height={50}
+            src="/logo.svg"
+            alt="Smart Realtor Tools Logo"
+            width={200}
+            height={55}
             className="cursor-pointer"
+            priority
           />
           <nav className="hidden md:flex space-x-2">
             <a
