@@ -12,11 +12,12 @@ export default function Header() {
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center space-x-4">
             <Image
-              src="/smartrealtortool.svg"
-              alt="Listing Revive Logo"
-              width={48}
-              height={48}
+              src="/logo.svg"
+              alt="Smart Realtor Tools Logo"
+              width={200}
+              height={55}
               className="cursor-pointer"
+              priority
             />
             <nav className="hidden md:flex space-x-6 text-sm font-medium">
               <a href="#about" className="hover:text-gray-600 transition">
