@@ -31,11 +31,27 @@ export default function LogoPreview() {
             </p>
             <div className="flex justify-center items-center min-h-[250px] bg-gradient-to-br from-gray-50 to-white rounded-2xl mb-6 p-8">
               <Image
-                src="/smartrealtortool-new.svg"
+                src="/smartrealtortool-new.png"
                 alt="Animated Modern Logo"
                 width={200}
                 height={200}
               />
+            </div>
+            <div className="flex gap-2 mb-4">
+              <a
+                href="/smartrealtortool-new.png"
+                download
+                className="flex-1 text-center bg-primary-500 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-primary-600 transition"
+              >
+                Download PNG
+              </a>
+              <a
+                href="/smartrealtortool-new.svg"
+                download
+                className="flex-1 text-center bg-gray-700 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-gray-800 transition"
+              >
+                Download SVG
+              </a>
             </div>
             <div className="flex flex-wrap gap-2">
               <span className="bg-primary-50 text-primary-600 px-3 py-1 rounded-full text-sm font-semibold">
@@ -65,11 +81,27 @@ export default function LogoPreview() {
             </p>
             <div className="flex justify-center items-center min-h-[250px] bg-gradient-to-br from-gray-50 to-white rounded-2xl mb-6 p-8">
               <Image
-                src="/smartrealtortool-minimal.svg"
+                src="/smartrealtortool-minimal.png"
                 alt="Minimal Professional Logo"
                 width={200}
                 height={200}
               />
+            </div>
+            <div className="flex gap-2 mb-4">
+              <a
+                href="/smartrealtortool-minimal.png"
+                download
+                className="flex-1 text-center bg-primary-500 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-primary-600 transition"
+              >
+                Download PNG
+              </a>
+              <a
+                href="/smartrealtortool-minimal.svg"
+                download
+                className="flex-1 text-center bg-gray-700 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-gray-800 transition"
+              >
+                Download SVG
+              </a>
             </div>
             <div className="flex flex-wrap gap-2">
               <span className="bg-primary-50 text-primary-600 px-3 py-1 rounded-full text-sm font-semibold">
@@ -99,11 +131,27 @@ export default function LogoPreview() {
             </p>
             <div className="flex justify-center items-center min-h-[250px] bg-gradient-to-br from-gray-50 to-white rounded-2xl mb-6 p-8">
               <Image
-                src="/smartrealtortool-tech.svg"
+                src="/smartrealtortool-tech.png"
                 alt="Tech Forward Logo"
                 width={200}
                 height={200}
               />
+            </div>
+            <div className="flex gap-2 mb-4">
+              <a
+                href="/smartrealtortool-tech.png"
+                download
+                className="flex-1 text-center bg-primary-500 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-primary-600 transition"
+              >
+                Download PNG
+              </a>
+              <a
+                href="/smartrealtortool-tech.svg"
+                download
+                className="flex-1 text-center bg-gray-700 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-gray-800 transition"
+              >
+                Download SVG
+              </a>
             </div>
             <div className="flex flex-wrap gap-2">
               <span className="bg-primary-50 text-primary-600 px-3 py-1 rounded-full text-sm font-semibold">
