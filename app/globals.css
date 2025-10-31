@@ -9,7 +9,7 @@
    Base body styling
 ----------------------------- */
 body {
-  @apply bg-gray-50 text-gray-900 min-h-screen;
+  @apply bg-background text-gray-900 min-h-screen;
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
   overflow-x: hidden;
   overflow-y: scroll; /* Keeps scrollbar stable */
@@ -21,13 +21,25 @@ body {
 }
 
 /* ----------------------------
-   Root color variables
+   Root color variables - Updated to match dashboard
 ----------------------------- */
 :root {
-  --foreground: #111827;
-  --background: #F9FAFB;
-  --primary: #5B7FFF;
-  --primary-hover: #4F6FE8;
+  --foreground: #1F2937;
+  --background: #F5F5F7;
+  --surface: #FFFFFF;
+  --primary: #6B7FFF;
+  --primary-hover: #5568E6;
+  --primary-light: #8B9DFF;
+  --text-primary: #1F2937;
+  --text-secondary: #6B7280;
+  --text-tertiary: #9CA3AF;
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 20px;
 }
 
 /* ----------------------------
@@ -99,11 +111,11 @@ video {
 }
 
 .animate-fadeIn {
-  animation: fadeIn 0.8s ease-in-out forwards;
+  animation: fadeIn 0.3s ease-in-out forwards;
 }
 
 .animate-slideUp {
-  animation: slideUp 0.6s ease-out forwards;
+  animation: slideUp 0.3s ease-out forwards;
 }
 
 /* ----------------------------

@@ -17,13 +17,13 @@ export default function MarketingPreview({
 }: MarketingPreviewProps) {
   return (
     <section className="max-w-6xl mx-auto px-4 pb-12 animate-slideUp">
-      <div className="relative bg-white rounded-b-3xl shadow-card overflow-hidden">
+      <div className="relative bg-white rounded-b-2xl shadow-card overflow-hidden">
         {/* Blurred Content Preview */}
         <div className="relative p-8 md:p-12">
           {/* Mock Content */}
           <div className="space-y-6 blur-sm select-none pointer-events-none">
             <div className="flex items-start space-x-4">
-              <div className="w-10 h-10 bg-primary-500 rounded-xl flex-shrink-0 flex items-center justify-center">
+              <div className="w-10 h-10 bg-primary-500 rounded-lg flex-shrink-0 flex items-center justify-center">
                 <span className="text-white text-lg font-bold">1</span>
               </div>
               <div className="flex-1">
@@ -33,7 +33,7 @@ export default function MarketingPreview({
               </div>
             </div>
             <div className="flex items-start space-x-4">
-              <div className="w-10 h-10 bg-primary-500 rounded-xl flex-shrink-0 flex items-center justify-center">
+              <div className="w-10 h-10 bg-primary-500 rounded-lg flex-shrink-0 flex items-center justify-center">
                 <span className="text-white text-lg font-bold">2</span>
               </div>
               <div className="flex-1">
@@ -43,7 +43,7 @@ export default function MarketingPreview({
               </div>
             </div>
             <div className="flex items-start space-x-4">
-              <div className="w-10 h-10 bg-primary-500 rounded-xl flex-shrink-0 flex items-center justify-center">
+              <div className="w-10 h-10 bg-primary-500 rounded-lg flex-shrink-0 flex items-center justify-center">
                 <span className="text-white text-lg font-bold">3</span>
               </div>
               <div className="flex-1">
@@ -53,7 +53,7 @@ export default function MarketingPreview({
               </div>
             </div>
             <div className="flex items-start space-x-4">
-              <div className="w-10 h-10 bg-primary-500 rounded-xl flex-shrink-0 flex items-center justify-center">
+              <div className="w-10 h-10 bg-primary-500 rounded-lg flex-shrink-0 flex items-center justify-center">
                 <span className="text-white text-lg font-bold">4</span>
               </div>
               <div className="flex-1">
@@ -64,11 +64,11 @@ export default function MarketingPreview({
             </div>
           </div>
 
-          {/* Overlay with CTA */}
+          {/* Overlay with CTA - Dashboard Style */}
           <div className="absolute inset-0 bg-gradient-to-b from-white/70 via-white/85 to-white/95 flex flex-col items-center justify-center p-8">
             <div className="text-center max-w-lg">
               <div className="mb-6">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-primary-500 rounded-2xl mb-4 shadow-lg">
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-primary-500 rounded-lg mb-4 shadow-lg">
                   <svg
                     className="w-8 h-8 text-white"
                     fill="none"

@@ -28,18 +28,18 @@ export default function ScoreCard({
   ],
 }: ScoreCardProps) {
   const percentage = (score / maxScore) * 100;
-  const circumference = 2 * Math.PI * 35; // radius = 35
+  const circumference = 2 * Math.PI * 50; // radius = 50
   const strokeDashoffset = circumference - (percentage / 100) * circumference;
 
   return (
     <section className="max-w-6xl mx-auto px-4 pt-12 animate-fadeIn">
-      <div className="bg-white rounded-t-3xl shadow-card overflow-hidden">
+      <div className="bg-white rounded-t-2xl shadow-card overflow-hidden">
         {/* Top Section - Property Image, Address, and Score */}
         <div className="p-8 md:p-12">
           <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
             {/* Left Side - Property Image and Address */}
             <div className="md:col-span-7 space-y-4">
-              <div className="relative w-full aspect-[16/10] rounded-2xl overflow-hidden shadow-lg">
+              <div className="relative w-full aspect-[16/10] rounded-lg overflow-hidden shadow-md">
                 <Image
                   src={propertyImage}
                   alt="Property"
@@ -56,40 +56,31 @@ export default function ScoreCard({
               </div>
             </div>
 
-            {/* Right Side - Circular Score Indicator */}
+            {/* Right Side - Circular Score Indicator - Dashboard Style */}
             <div className="md:col-span-5 flex flex-col items-center justify-center">
-              <div className="relative w-40 h-40 md:w-48 md:h-48">
+              <div className="relative w-48 h-48 md:w-56 md:h-56">
                 {/* Background Circle */}
                 <svg className="transform -rotate-90 w-full h-full">
-                  <defs>
-                    <linearGradient id="scoreGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                      <stop offset="0%" stopColor="#5B7FFF" />
-                      <stop offset="100%" stopColor="#818CF8" />
-                    </linearGradient>
-                  </defs>
                   <circle
                     cx="50%"
                     cy="50%"
-                    r="35"
-                    stroke="#E5E7EB"
-                    strokeWidth="10"
+                    r="50"
+                    stroke="#F3F4F6"
+                    strokeWidth="12"
                     fill="none"
                   />
-                  {/* Progress Circle with Gradient */}
+                  {/* Progress Circle */}
                   <circle
                     cx="50%"
                     cy="50%"
-                    r="35"
-                    stroke="url(#scoreGradient)"
-                    strokeWidth="10"
+                    r="50"
+                    stroke="#6B7FFF"
+                    strokeWidth="12"
                     fill="none"
                     strokeDasharray={circumference}
                     strokeDashoffset={strokeDashoffset}
                     strokeLinecap="round"
                     className="transition-all duration-1000 ease-out"
-                    style={{
-                      filter: "drop-shadow(0 4px 8px rgba(91, 127, 255, 0.3))",
-                    }}
                   />
                 </svg>
                 {/* Score Text */}
@@ -112,7 +103,7 @@ export default function ScoreCard({
           </div>
         </div>
 
-        {/* Bottom Section - Performance Breakdown with Progress Sliders */}
+        {/* Bottom Section - Performance Breakdown with Progress Bars - Dashboard Style */}
         <div className="px-8 md:px-12 pb-8 md:pb-12">
           <div className="border-t border-gray-100 pt-8">
             <h4 className="text-xl font-semibold text-gray-900 mb-6">
@@ -131,12 +122,12 @@ export default function ScoreCard({
                         {metric.value}/{metric.maxValue}
                       </span>
                     </div>
-                    <div className="relative w-full h-3 bg-gray-100 rounded-full overflow-hidden">
+                    <div className="relative w-full h-2 bg-gray-100 rounded-full overflow-hidden">
                       <div
-                        className={`absolute left-0 top-0 h-full ${metric.color} rounded-full transition-all duration-1000 ease-out`}
+                        className={`absolute left-0 top-0 h-full rounded-full transition-all duration-1000 ease-out`}
                         style={{
                           width: `${metricPercentage}%`,
-                          boxShadow: "0 2px 8px rgba(91, 127, 255, 0.2)",
+                          background: 'linear-gradient(90deg, #8B9DFF, #6B7FFF)',
                         }}
                       />
                     </div>

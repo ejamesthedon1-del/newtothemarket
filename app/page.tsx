@@ -41,10 +41,10 @@ export default function Home() {
   };
 
   return (
-    <main className="min-h-screen bg-gray-50">
+    <main className="min-h-screen bg-background">
       <Header />
 
-      {/* Hero Section */}
+      {/* Hero Section - Dashboard Style */}
       <section className="relative min-h-[650px] md:min-h-[700px] flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
         {/* Background Image with Overlay */}
         <div className="absolute inset-0 z-0">
@@ -71,21 +71,21 @@ export default function Home() {
             </p>
           </div>
 
-          {/* Address Form */}
+          {/* Address Form - Dashboard Card Style */}
           <div className="max-w-2xl mx-auto animate-slideUp">
             <form onSubmit={handleSubmit} className="space-y-4">
-              <div className="bg-white/10 backdrop-blur-md rounded-3xl p-6 shadow-2xl">
+              <div className="bg-white rounded-2xl p-8 shadow-xl">
                 <AddressInput
                   onSelect={(addr) => setFormData({ ...formData, address: addr })}
                 />
                 <button
                   type="submit"
                   disabled={loading}
-                  className="w-full mt-4 bg-primary-500 text-white py-4 px-8 rounded-full font-semibold text-lg hover:bg-primary-600 transition-all transform hover:scale-[1.02] shadow-lg hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="w-full mt-6 bg-primary-500 text-white py-4 px-8 rounded-full font-semibold text-lg hover:bg-primary-600 transition-all transform hover:scale-[1.02] shadow-lg hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   {loading ? "Analyzing..." : "Analyze My Listing"}
                 </button>
-                <p className="text-sm text-white/70 mt-4 text-center">
+                <p className="text-sm text-gray-500 mt-4 text-center">
                   No credit card required • Results in 60 seconds
                 </p>
               </div>
@@ -98,7 +98,7 @@ export default function Home() {
       <ScoreCard />
       <MarketingPreview onSubscribe={handleSubscribe} />
 
-      {/* Stats Section */}
+      {/* Stats Section - Dashboard Style */}
       <section className="max-w-6xl mx-auto mt-16 px-4 py-12">
         <h2 className="text-4xl font-bold text-center mb-4 text-gray-900">
           Why Homes Sit on the Market
@@ -129,7 +129,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* How It Helps Section */}
+      {/* How It Helps Section - Dashboard Style */}
       <section className="max-w-6xl mx-auto mt-20 px-4 py-12">
         <h2 className="text-4xl font-bold text-center mb-4 text-gray-900">
           How ListingRevive Helps You Sell Faster
@@ -171,7 +171,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Footer */}
+      {/* Footer - Dashboard Style */}
       <footer className="bg-white mt-20 py-8 text-center text-gray-600 border-t border-gray-200">
         <div className="max-w-6xl mx-auto px-4">
           <p className="text-sm">© 2025 ListingRevive. All rights reserved.</p>
@@ -181,7 +181,7 @@ export default function Home() {
   );
 }
 
-/* -------------------- Header -------------------- */
+/* -------------------- Header - Dashboard Style -------------------- */
 const Header = () => (
   <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-soft border-b border-gray-100">
     <div className="max-w-7xl mx-auto px-6 py-4">
@@ -195,22 +195,22 @@ const Header = () => (
             className="cursor-pointer"
             priority
           />
-          <nav className="hidden md:flex space-x-8 text-sm font-medium">
+          <nav className="hidden md:flex space-x-2">
             <a
               href="#about"
-              className="text-gray-700 hover:text-primary-500 transition"
+              className="px-4 py-2 rounded-full text-sm font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-100 transition-all"
             >
               About
             </a>
             <a
               href="#plans"
-              className="text-gray-700 hover:text-primary-500 transition"
+              className="px-4 py-2 rounded-full text-sm font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-100 transition-all"
             >
               Plans
             </a>
             <a
               href="#contact"
-              className="text-gray-700 hover:text-primary-500 transition"
+              className="px-4 py-2 rounded-full text-sm font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-100 transition-all"
             >
               Contact
             </a>
@@ -222,7 +222,7 @@ const Header = () => (
   </header>
 );
 
-/* -------------------- Stat Card -------------------- */
+/* -------------------- Stat Card - Dashboard Style -------------------- */
 const StatCard = ({
   percentage,
   description,
@@ -234,13 +234,13 @@ const StatCard = ({
   color: string;
   textColor: string;
 }) => (
-  <div className={`${color} p-8 rounded-2xl shadow-card hover:shadow-hover transition-all transform hover:-translate-y-1`}>
+  <div className={`${color} p-8 rounded-lg shadow-card hover:shadow-hover transition-all transform hover:-translate-y-1`}>
     <p className={`text-5xl font-bold ${textColor} mb-4`}>{percentage}</p>
     <p className="text-gray-700 leading-relaxed">{description}</p>
   </div>
 );
 
-/* -------------------- Feature Card -------------------- */
+/* -------------------- Feature Card - Dashboard Style -------------------- */
 const FeatureCard = ({
   icon,
   title,
@@ -250,7 +250,7 @@ const FeatureCard = ({
   title: string;
   text: string;
 }) => (
-  <div className="bg-white p-8 rounded-2xl shadow-card hover:shadow-hover transition-all transform hover:-translate-y-1">
+  <div className="bg-white p-8 rounded-lg shadow-card hover:shadow-hover transition-all transform hover:-translate-y-1">
     <div className="flex justify-center mb-6">
       {icon.startsWith("/") ? (
         <Image src={icon} alt={title} width={56} height={56} />
@@ -265,7 +265,7 @@ const FeatureCard = ({
   </div>
 );
 
-/* -------------------- Mobile Menu -------------------- */
+/* -------------------- Mobile Menu - Dashboard Style -------------------- */
 const MobileMenu = () => {
   const [open, setOpen] = useState(false);
 
@@ -273,7 +273,7 @@ const MobileMenu = () => {
     <div className="md:hidden relative">
       <button
         onClick={() => setOpen(!open)}
-        className="p-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500"
+        className="p-2 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-primary-500 transition-all"
         aria-label="Toggle menu"
       >
         <div
@@ -293,7 +293,7 @@ const MobileMenu = () => {
       </button>
 
       <div
-        className={`absolute top-full right-0 mt-2 bg-white shadow-lg rounded-2xl overflow-hidden transition-all duration-300 ${
+        className={`absolute top-full right-0 mt-2 bg-white shadow-lg rounded-lg overflow-hidden transition-all duration-300 ${
           open ? "max-h-60 opacity-100" : "max-h-0 opacity-0"
         }`}
         style={{ minWidth: "200px" }}
