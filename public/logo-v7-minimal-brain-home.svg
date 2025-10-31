@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad7" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#5B7FFF" />
+      <stop offset="100%" stop-color="#A5B4FC" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Minimal Line Art Style -->
+  <g transform="translate(100, 100)">
+    <!-- House outline -->
+    <path d="M 0 -55 L 45 -20 L 45 45 L -45 45 L -45 -20 Z" 
+          fill="none" stroke="url(#grad7)" stroke-width="4" stroke-linejoin="round"/>
+    
+    <!-- Brain inside house -->
+    <g transform="translate(0, 5)">
+      <!-- Brain outline - simplified -->
+      <path d="M -25 -15 Q -30 -25 -20 -30 Q -10 -32 0 -30 Q 10 -32 20 -30 Q 30 -25 25 -15 Q 28 -5 25 5 Q 20 15 10 18 Q 0 20 -10 18 Q -20 15 -25 5 Q -28 -5 -25 -15" 
+            fill="none" stroke="#5B7FFF" stroke-width="3"/>
+      
+      <!-- Brain details - minimal -->
+      <path d="M -15 -10 Q -10 -15 -5 -10 Q 0 -5 -5 0" 
+            fill="none" stroke="#5B7FFF" stroke-width="2"/>
+      <path d="M 15 -10 Q 10 -15 5 -10 Q 0 -5 5 0" 
+            fill="none" stroke="#5B7FFF" stroke-width="2"/>
+      <path d="M -8 5 Q 0 8 8 5" 
+            fill="none" stroke="#5B7FFF" stroke-width="2"/>
+      
+      <!-- Center line -->
+      <line x1="0" y1="-25" x2="0" y2="15" stroke="#5B7FFF" stroke-width="2" opacity="0.5"/>
+    </g>
+    
+    <!-- Door - minimal -->
+    <rect x="-8" y="25" width="16" height="20" rx="1" 
+          fill="none" stroke="#5B7FFF" stroke-width="2"/>
+    
+    <!-- Smart dot indicator -->
+    <circle cx="0" cy="-55" r="5" fill="#60A5FA">
+      <animate attributeName="opacity" values="1;0.4;1" dur="2s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+</svg>

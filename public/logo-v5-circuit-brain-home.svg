@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad5" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#5B7FFF" />
+      <stop offset="50%" stop-color="#7C3AED" />
+      <stop offset="100%" stop-color="#818CF8" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Circuit Brain Home -->
+  <g transform="translate(100, 100)">
+    <!-- House structure -->
+    <path d="M 0 -60 L 50 -20 L 50 50 L -50 50 L -50 -20 Z" 
+          fill="url(#grad5)" opacity="0.9"/>
+    
+    <!-- Brain circuit pattern -->
+    <g opacity="0.5">
+      <!-- Left hemisphere circuit -->
+      <path d="M -30 -10 L -25 -15 L -20 -10 L -15 -15 L -10 -10" 
+            fill="none" stroke="white" stroke-width="2"/>
+      <path d="M -30 0 L -25 5 L -20 0 L -15 5 L -10 0" 
+            fill="none" stroke="white" stroke-width="2"/>
+      <path d="M -30 10 L -25 15 L -20 10 L -15 15 L -10 10" 
+            fill="none" stroke="white" stroke-width="2"/>
+      
+      <!-- Right hemisphere circuit -->
+      <path d="M 30 -10 L 25 -15 L 20 -10 L 15 -15 L 10 -10" 
+            fill="none" stroke="white" stroke-width="2"/>
+      <path d="M 30 0 L 25 5 L 20 0 L 15 5 L 10 0" 
+            fill="none" stroke="white" stroke-width="2"/>
+      <path d="M 30 10 L 25 15 L 20 10 L 15 15 L 10 10" 
+            fill="none" stroke="white" stroke-width="2"/>
+      
+      <!-- Circuit nodes -->
+      <circle cx="-30" cy="-10" r="2" fill="white"/>
+      <circle cx="-30" cy="0" r="2" fill="white"/>
+      <circle cx="-30" cy="10" r="2" fill="white"/>
+      <circle cx="30" cy="-10" r="2" fill="white"/>
+      <circle cx="30" cy="0" r="2" fill="white"/>
+      <circle cx="30" cy="10" r="2" fill="white"/>
+      
+      <!-- Center connection -->
+      <line x1="-10" y1="0" x2="10" y2="0" stroke="white" stroke-width="2"/>
+      <circle cx="0" cy="0" r="3" fill="white"/>
+    </g>
+    
+    <!-- Door -->
+    <rect x="-10" y="25" width="20" height="25" rx="2" fill="white" opacity="0.9"/>
+    
+    <!-- Windows -->
+    <rect x="-35" y="5" width="12" height="10" rx="1" fill="white" opacity="0.7"/>
+    <rect x="23" y="5" width="12" height="10" rx="1" fill="white" opacity="0.7"/>
+    
+    <!-- Smart indicator with pulse -->
+    <g transform="translate(0, -60)">
+      <circle cx="0" cy="0" r="8" fill="#60A5FA" opacity="0.3">
+        <animate attributeName="r" values="8;12;8" dur="2s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="0" cy="0" r="5" fill="#60A5FA">
+        <animate attributeName="opacity" values="1;0.5;1" dur="2s" repeatCount="indefinite"/>
+      </circle>
+    </g>
+  </g>
+</svg>

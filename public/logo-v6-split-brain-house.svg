@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad6" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#5B7FFF" />
+      <stop offset="100%" stop-color="#818CF8" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Split Design: Brain Top, House Bottom -->
+  <g transform="translate(100, 100)">
+    <!-- Upper half: Brain -->
+    <g transform="translate(0, -30)">
+      <!-- Brain outline -->
+      <ellipse cx="0" cy="0" rx="45" ry="30" fill="url(#grad6)" opacity="0.9"/>
+      
+      <!-- Left hemisphere -->
+      <path d="M -35 -5 Q -30 -15 -20 -10 Q -15 -5 -20 5 Q -25 15 -30 10 Q -35 5 -35 -5" 
+            fill="none" stroke="white" stroke-width="2.5" opacity="0.6"/>
+      <path d="M -20 -5 Q -15 -10 -10 -5 Q -5 0 -10 10 Q -15 15 -20 10 Q -25 5 -20 -5" 
+            fill="none" stroke="white" stroke-width="2.5" opacity="0.6"/>
+      
+      <!-- Right hemisphere -->
+      <path d="M 35 -5 Q 30 -15 20 -10 Q 15 -5 20 5 Q 25 15 30 10 Q 35 5 35 -5" 
+            fill="none" stroke="white" stroke-width="2.5" opacity="0.6"/>
+      <path d="M 20 -5 Q 15 -10 10 -5 Q 5 0 10 10 Q 15 15 20 10 Q 25 5 20 -5" 
+            fill="none" stroke="white" stroke-width="2.5" opacity="0.6"/>
+      
+      <!-- Center division -->
+      <line x1="0" y1="-25" x2="0" y2="25" stroke="white" stroke-width="2" opacity="0.4"/>
+      
+      <!-- Synapses -->
+      <circle cx="-25" cy="0" r="2" fill="white"/>
+      <circle cx="25" cy="0" r="2" fill="white"/>
+      <circle cx="0" cy="-15" r="2" fill="white"/>
+      <circle cx="0" cy="15" r="2" fill="white"/>
+    </g>
+    
+    <!-- Lower half: House -->
+    <g transform="translate(0, 20)">
+      <!-- House base -->
+      <rect x="-40" y="0" width="80" height="45" rx="3" fill="url(#grad6)" opacity="0.85"/>
+      
+      <!-- Roof line -->
+      <path d="M -40 0 L 0 -15 L 40 0" fill="none" stroke="#5B7FFF" stroke-width="3"/>
+      
+      <!-- Door -->
+      <rect x="-10" y="15" width="20" height="30" rx="2" fill="white" opacity="0.9"/>
+      
+      <!-- Windows -->
+      <rect x="-32" y="10" width="15" height="12" rx="2" fill="white" opacity="0.7"/>
+      <rect x="17" y="10" width="15" height="12" rx="2" fill="white" opacity="0.7"/>
+    </g>
+    
+    <!-- Connection indicator -->
+    <circle cx="0" cy="0" r="6" fill="#60A5FA">
+      <animate attributeName="r" values="6;9;6" dur="2s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+</svg>

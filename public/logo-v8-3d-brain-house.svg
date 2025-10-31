@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad8a" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#5B7FFF" />
+      <stop offset="100%" stop-color="#4F6FE8" />
+    </linearGradient>
+    <linearGradient id="grad8b" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#818CF8" />
+      <stop offset="100%" stop-color="#A5B4FC" />
+    </linearGradient>
+    <filter id="shadow8">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="3"/>
+      <feOffset dx="2" dy="2" result="offsetblur"/>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- 3D Isometric Style -->
+  <g transform="translate(100, 100)">
+    <!-- House left side (3D effect) -->
+    <path d="M 0 -50 L -40 -25 L -40 35 L 0 10 Z" 
+          fill="url(#grad8a)" opacity="0.8" filter="url(#shadow8)"/>
+    
+    <!-- House right side (3D effect) -->
+    <path d="M 0 -50 L 40 -25 L 40 35 L 0 10 Z" 
+          fill="url(#grad8b)" opacity="0.9" filter="url(#shadow8)"/>
+    
+    <!-- House front -->
+    <path d="M 0 10 L -40 35 L -40 55 L 0 80 L 40 55 L 40 35 Z" 
+          fill="#5B7FFF" opacity="0.95" filter="url(#shadow8)"/>
+    
+    <!-- Brain on top (3D) -->
+    <g transform="translate(0, -55)">
+      <!-- Brain left hemisphere -->
+      <ellipse cx="-12" cy="0" rx="15" ry="12" fill="#60A5FA" opacity="0.9"/>
+      <path d="M -20 -3 Q -15 -8 -10 -3 Q -8 2 -12 5" 
+            fill="none" stroke="white" stroke-width="2" opacity="0.6"/>
+      
+      <!-- Brain right hemisphere -->
+      <ellipse cx="12" cy="0" rx="15" ry="12" fill="#818CF8" opacity="0.9"/>
+      <path d="M 20 -3 Q 15 -8 10 -3 Q 8 2 12 5" 
+            fill="none" stroke="white" stroke-width="2" opacity="0.6"/>
+      
+      <!-- Center connection -->
+      <ellipse cx="0" cy="0" rx="8" ry="10" fill="#5B7FFF" opacity="0.9"/>
+      
+      <!-- Pulse -->
+      <circle cx="0" cy="-8" r="4" fill="#60A5FA">
+        <animate attributeName="r" values="4;6;4" dur="2s" repeatCount="indefinite"/>
+      </circle>
+    </g>
+    
+    <!-- Door (3D) -->
+    <path d="M -8 45 L -8 65 L 8 70 L 8 50 Z" fill="white" opacity="0.9"/>
+    
+    <!-- Window (3D) -->
+    <path d="M -30 40 L -30 48 L -18 52 L -18 44 Z" fill="white" opacity="0.7"/>
+    <path d="M 18 44 L 18 52 L 30 48 L 30 40 Z" fill="white" opacity="0.7"/>
+  </g>
+</svg>
