@@ -190,10 +190,10 @@ const Header = () => (
       <div className="flex items-center justify-between">
         <div className="flex items-center space-x-8">
           <Image
-            src="/logo.svg"
+            src="/smartrealtortool.svg"
             alt="Smart Realtor Tools Logo"
-            width={200}
-            height={55}
+            width={50}
+            height={50}
             className="cursor-pointer"
             priority
           />
