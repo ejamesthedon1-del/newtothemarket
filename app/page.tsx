@@ -94,10 +94,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Listing Score Card Section */}
+      {/* Listing Score Card Section - Connected with Marketing Preview */}
       <ScoreCard />
-
-      {/* Blurred Marketing Plan Preview */}
       <MarketingPreview onSubscribe={handleSubscribe} />
 
       {/* Stats Section */}
