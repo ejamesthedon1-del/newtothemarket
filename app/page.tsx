@@ -3,9 +3,7 @@
 import Image from "next/image";
 import React, { useState } from "react";
 import AddressInput from "./components/AddressInput";
-import StorytellingSection from "./components/StorytellingSection";
-import Testimonials from "./components/Testimonials";
-import SubscriptionCTA from "./components/SubscriptionCTA";
+
 import { useRouter } from "next/navigation";
 
 export default function Home() {
@@ -46,7 +44,7 @@ export default function Home() {
       <Header />
 
       {/* Hero Section - Dashboard Style */}
-      <section className="relative min-h-[650px] md:min-h-[700px] flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
+      <section className="relative min-h-[500px] md:min-h-[550px] flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
         {/* Background Image with Overlay */}
         <div className="absolute inset-0 z-0">
           <Image
@@ -63,10 +61,7 @@ export default function Home() {
         {/* Hero Content */}
         <div className="relative z-10 max-w-6xl mx-auto px-6 sm:px-8 md:px-4 py-20">
           <div className="text-center mb-12 animate-fadeIn">
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 leading-tight text-balance">
-              See Where Your Listing Stands
-            </h1>
-            <p className="text-white/90 text-base md:text-lg leading-relaxed max-w-3xl mx-auto text-balance">
+
               Get a smart evaluation on why your home might not be selling — and
               discover proven ways to attract more buyers fast.
             </p>
@@ -97,8 +92,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Storytelling Section - Emotional Connection */}
-      <StorytellingSection />
+
 
       {/* Testimonials Section */}
       <Testimonials />
