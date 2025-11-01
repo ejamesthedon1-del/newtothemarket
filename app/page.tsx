@@ -3,8 +3,7 @@
 import Image from "next/image";
 import React, { useState } from "react";
 import AddressInput from "./components/AddressInput";
-import ScoreCard from "./components/ScoreCard";
-import MarketingPreview from "./components/MarketingPreview";
+import StorytellingSection from "./components/StorytellingSection";
 import { useRouter } from "next/navigation";
 
 export default function Home() {
@@ -96,82 +95,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Listing Score Card Section - Connected with Marketing Preview */}
-      <ScoreCard />
-      <MarketingPreview onSubscribe={handleSubscribe} />
-
-      {/* Stats Section - Dashboard Style */}
-      <section className="max-w-6xl mx-auto mt-16 px-4 py-12">
-        <h2 className="text-4xl font-bold text-center mb-4 text-gray-900">
-          Why Homes Sit on the Market
-        </h2>
-        <p className="text-center text-gray-600 text-lg mb-12 max-w-2xl mx-auto">
-          Understanding the common pitfalls can help you avoid them
-        </p>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <StatCard
-            percentage="72%"
-            description="of homes fail to attract buyers quickly due to poor listing photos."
-            color="bg-red-50"
-            textColor="text-red-600"
-          />
-          <StatCard
-            percentage="65%"
-            description="of listings get fewer views because of ineffective descriptions."
-            color="bg-yellow-50"
-            textColor="text-yellow-600"
-          />
-          <StatCard
-            percentage="58%"
-            description="of homes stay longer on the market due to poor promotion."
-            color="bg-orange-50"
-            textColor="text-orange-600"
-          />
-        </div>
-      </section>
-
-      {/* How It Helps Section - Dashboard Style */}
-      <section className="max-w-6xl mx-auto mt-20 px-4 py-12">
-        <h2 className="text-4xl font-bold text-center mb-4 text-gray-900">
-          How ListingRevive Helps You Sell Faster
-        </h2>
-        <p className="text-center text-gray-600 text-lg mb-12 max-w-2xl mx-auto">
-          Our AI-powered platform provides everything you need to stand out
-        </p>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          <FeatureCard
-            icon="/chatbot.png"
-            title="Stunning Listing Photos"
-            text="We optimize your home's photos with professional lighting and staging guidance — even without hiring a photographer."
-          />
-          <FeatureCard
-            icon="✍️"
-            title="Compelling Descriptions"
-            text="Our AI writes descriptions that highlight your home's unique features, so buyers actually want to visit."
-          />
-          <FeatureCard
-            icon="📣"
-            title="Smart Marketing"
-            text="We boost your listing where buyers are — social media, local platforms, and targeted outreach."
-          />
-          <FeatureCard
-            icon="📊"
-            title="Personalized Insights"
-            text="Get tailored advice based on your home's strengths and market trends — small tweaks that make a big difference."
-          />
-        </div>
-
-        <div className="text-center mt-12">
-          <a
-            href="#"
-            className="inline-block bg-primary-500 text-white px-10 py-4 rounded-full font-semibold text-lg hover:bg-primary-600 transition-all transform hover:scale-105 shadow-lg hover:shadow-xl"
-          >
-            Get AI Analysis
-          </a>
-        </div>
-      </section>
+      {/* Storytelling Section - Emotional Connection */}
+      <StorytellingSection />
 
       {/* Footer - Dashboard Style */}
       <footer className="bg-white mt-20 py-8 text-center text-gray-600 border-t border-gray-200">
