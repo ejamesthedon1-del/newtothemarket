@@ -186,14 +186,14 @@ export default function Home() {
 /* -------------------- Header - Dashboard Style -------------------- */
 const Header = () => (
   <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-soft border-b border-gray-100">
-    <div className="max-w-7xl mx-auto px-6 py-4">
+    <div className="max-w-7xl mx-auto px-6 py-2">
       <div className="flex items-center justify-between">
         <div className="flex items-center space-x-8">
           <Image
             src="/smartrealtortool.svg"
             alt="Smart Realtor Tools Logo"
-            width={50}
-            height={50}
+            width={36}
+            height={36}
             className="cursor-pointer"
             priority
           />
