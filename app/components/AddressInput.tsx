@@ -35,11 +35,11 @@ function PlacesAutocompleteInput({
         onChange={(e) => setValue(e.target.value)}
         disabled={!ready}
         placeholder="Enter your home address"
-        className="w-full border-2 border-gray-200 bg-white rounded-lg px-6 py-4 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500 disabled:bg-gray-100 disabled:cursor-not-allowed shadow-sm text-base text-gray-900 placeholder-gray-500 transition-all"
+        className="w-full border-2 border-gray-200 bg-white/90 backdrop-blur-sm rounded-lg px-6 py-4 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500 disabled:bg-gray-100 disabled:cursor-not-allowed shadow-sm text-base text-gray-900 placeholder-gray-500 transition-all"
       />
 
       {status === "OK" && (
-        <ul className="absolute left-0 right-0 border border-gray-200 rounded-lg mt-2 bg-white shadow-lg z-50 max-h-60 overflow-y-auto">
+        <ul className="absolute left-0 right-0 border border-gray-200 rounded-lg mt-2 bg-white/95 backdrop-blur-md shadow-lg z-50 max-h-60 overflow-y-auto">
           {data.map((suggestion: { place_id: string; description: string }) => (
             <li
               key={suggestion.place_id}

@@ -74,7 +74,7 @@ export default function Home() {
           {/* Address Form - Dashboard Card Style */}
           <div className="max-w-2xl mx-auto animate-slideUp">
             <form onSubmit={handleSubmit} className="space-y-4">
-              <div className="bg-white rounded-2xl p-8 shadow-xl">
+              <div className="bg-transparent backdrop-blur-sm rounded-2xl p-8 shadow-xl border border-white/20">
                 <AddressInput
                   onSelect={(addr) =>
                     setFormData({ ...formData, address: addr })
