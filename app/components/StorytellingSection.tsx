@@ -66,9 +66,9 @@ export default function StorytellingSection() {
 
   return (
     <section className="max-w-7xl mx-auto px-6 sm:px-10 py-20">
-      <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-10 sm:p-16">
+      <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-12 sm:p-20">
         <div className="text-center mb-16">
-          <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
             How Smart Realtor Tools Helps You Sell Smarter
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
